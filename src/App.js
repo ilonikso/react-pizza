@@ -16,7 +16,6 @@ function App() {
 
     useEffect(() => {
         dispatch(fetchPizzas(state.category, state.sortBy));
-        console.log('Fetch pizza by app render')
     }, [state.category, state.sortBy])
 
     return (
