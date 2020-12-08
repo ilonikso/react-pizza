@@ -2,7 +2,7 @@
 
 [![](https://ilonikso-react-pizza.herokuapp.com/favicon.ico)]()
 
-[![Heroku](https://https://ilonikso-react-pizza.herokuapp.com//?app=heroku-badge)]
+[![Heroku](https://ilonikso-react-pizza.herokuapp.com//?app=ilonikso-react-pizza)]
 [Online](https://ilonikso-react-pizza.herokuapp.com/)
 
 
