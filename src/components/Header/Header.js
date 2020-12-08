@@ -6,13 +6,12 @@ import logo from "./../../assets/img/pizza-logo.svg";
 import HeaderCartIconSVG from "../Icons/HeaderCartIconSVG";
 
 const Header = () => {
-    const state = useSelector(state => {
-        return{
+    const state = useSelector((state) => {
+        return {
             totalPrice: state.cart.totalPrice,
-            totalItemCount: state.cart.itemsCount
-        }
-
-    })
+            totalItemCount: state.cart.itemsCount,
+        };
+    });
 
     return (
         <div className="header">

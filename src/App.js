@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./scss/app.scss";
 import Page from "./components/Page";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPizzas } from "./redux/actions/pizzas";
 
 function App() {
+    const dispatch = useDispatch();
+
+    const state = useSelector(state => {
+        return{
+            category: state.filters.category,
+            sortBy: state.filters.sortBy,
+        }
+    })
+
+    useEffect(() => {
+        dispatch(fetchPizzas(state.category, state.sortBy));
+        console.log('Fetch pizza by app render')
+    }, [state.category, state.sortBy])
+
     return (
         <div className="App">
             <Page />
@@ -11,20 +27,3 @@ function App() {
 }
 
 export default App;
-
-// Old method using connect hoc
-
-/* const mapStateToProps = (state) => {
-    return {
-        items: state.pizzas.items,
-    };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return{
-        setPizzas: (items) => dispatch(setPizzas(items)),
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
- */

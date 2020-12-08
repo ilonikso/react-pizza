@@ -5,7 +5,6 @@ export const setIsInit = (isInit) => {
     };
 };
 
-
 export const setIsFetchingItems = (isFetchingItems) => {
     return {
         type: "SET_IS_FETCHING_ITEMS",

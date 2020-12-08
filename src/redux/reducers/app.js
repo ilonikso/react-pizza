@@ -1,6 +1,6 @@
 const initialState = {
     isFetchingItems: false,
-    isInit: false
+    isInit: false,
 };
 
 const app = (state = initialState, action) => {

@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "./Header/Header";
 import Home from "../pages/Home";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Cart from "../pages/Cart";
+import NotFound from "../pages/NotFound";
 
 const Page = () => {
     return (
@@ -11,8 +12,11 @@ const Page = () => {
                 <Header />
 
                 <div className="content">
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/cart" component={Cart} />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/cart" component={Cart} />
+                        <Route path="*" component={NotFound} />
+                    </Switch>
                 </div>
             </div>
         </div>
